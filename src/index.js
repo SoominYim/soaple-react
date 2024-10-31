@@ -3,12 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import CommentList from "./chapter_05/CommentList";
-
+import Welcome from "./chapter_05_01/Welcome";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-
 
 // chapter_03
 
@@ -18,7 +15,6 @@ root.render(
     <App />
   </React.StrictMode>
 ); */
-
 
 // chapter_04
 
@@ -32,17 +28,32 @@ setInterval(() => {
 }, 1000);
 */
 
+// chapter_05
 
-// chapter_06
-
-
+/* import CommentList from "./chapter_05/CommentList";
 
 root.render( 
     <React.StrictMode>
       <CommentList></CommentList>
     </React.StrictMode>
 )
+*/
 
+const App = (props) => {
+  return (
+    <div>
+      <Welcome name="Mike" />
+      <Welcome name="Steve" />
+      <Welcome name="Jane" />
+    </div>
+  );
+};
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
 // root.render(
 //   <React.StrictMode>
