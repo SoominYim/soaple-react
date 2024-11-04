@@ -53,13 +53,9 @@ const App = (props) => {
 };
 */
 
-root.render(<React.StrictMode></React.StrictMode>);
+// root.render(<React.StrictMode></React.StrictMode>);
 
-root.render(
-  <React.StrictMode>
-    <NotificationList />
-  </React.StrictMode>
-);
+root.render(<NotificationList />);
 
 // root.render(
 //   <React.StrictMode>

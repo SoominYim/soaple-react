@@ -27,6 +27,7 @@ class NotificationList extends React.Component {
   componentDidMount() {
     const { notifications } = this.state;
     timer = setInterval(() => {
+      console.log(notifications.length);
       if (notifications.length < reserveNotifications.length) {
         const index = notifications.length;
         notifications.push(reserveNotifications[index]);
@@ -42,8 +43,8 @@ class NotificationList extends React.Component {
   render() {
     return (
       <div>
-        {this.state.notifications.map((notification) => {
-          return <Notification message={notification.message} />;
+        {this.state.notifications.map((notification, i) => {
+          return <Notification key={i} message={notification.message} />;
         })}
       </div>
     );
